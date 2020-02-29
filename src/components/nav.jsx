@@ -10,14 +10,14 @@ class Nav extends React.Component {
         <ul className='nav justify-content-end'>
           <li
             className={
-              this.props.cssBadge === 'view-cards'
+              this.props.view === 'view-cards'
                 ? 'badge badge-primary'
                 : 'nav-item'
             }
           >
             <a
               className={
-                this.props.cssBadge === 'view-cards'
+                this.props.view === 'view-cards'
                   ? 'nav-link text-white'
                   : 'nav-link'
               }
@@ -29,14 +29,14 @@ class Nav extends React.Component {
           </li>
           <li
             className={
-              this.props.cssBadge === 'review-cards'
+              this.props.view === 'review-cards'
                 ? 'badge badge-primary'
                 : 'nav-item'
             }
           >
             <a
               className={
-                this.props.cssBadge === 'review-cards'
+                this.props.view === 'review-cards'
                   ? 'nav-link text-white'
                   : 'nav-link'
               }
@@ -48,14 +48,14 @@ class Nav extends React.Component {
           </li>
           <li
             className={
-              this.props.cssBadge === 'create-cards'
+              this.props.view === 'create-cards'
                 ? 'badge badge-primary'
                 : 'nav-item'
             }
           >
             <a
               className={
-                this.props.cssBadge === 'create-cards'
+                this.props.view === 'create-cards'
                   ? 'nav-link text-white'
                   : 'nav-link'
               }
