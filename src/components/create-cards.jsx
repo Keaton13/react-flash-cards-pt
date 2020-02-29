@@ -20,7 +20,7 @@ class CreateCards extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.addCards(this.state);
+    this.props.addCards({...this.state});
     this.props.setView('view-cards');
   }
 

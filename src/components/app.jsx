@@ -40,7 +40,7 @@ class App extends React.Component {
 
   saveCards() {
     let cards = this.state.cards;
-    JSON.stringify(cards);
+    cards = JSON.stringify(cards);
     localStorage.setItem('flash-cards', cards);
   }
 
