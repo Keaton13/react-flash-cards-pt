@@ -54,8 +54,8 @@ class App extends React.Component {
     console.log("Cards From App ", this.state.cards)
     return (
             <div>
-                <Nav setView={this.setView} cssBadge={this.state.cssBadge} />
-                {this.getView()}
+                <Nav setView={this.setView} view={this.state.view} />
+                { this.getView() }
             </div>
     );
   }
