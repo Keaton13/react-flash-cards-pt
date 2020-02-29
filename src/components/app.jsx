@@ -9,7 +9,6 @@ class App extends React.Component {
         super(props);
         this.state = {
             view: 'view-cards',
-            cssBadge: ''
         }
         this.setView = this.setView.bind(this);
         this.getView = this.getView.bind(this);
@@ -17,10 +16,8 @@ class App extends React.Component {
 
     setView(newView){
         this.setState({
-            view: newView,
-            cssBadge: newView
+            view: newView        
         })
-        console.log(this.state.cssBadge)
     }
 
     getView(){
@@ -39,7 +36,7 @@ class App extends React.Component {
     render(){
         return (
             <div>
-                <Nav setView={this.setView} cssBadge={this.state.cssBadge}/>
+                <Nav setView={this.setView} view={this.state.view} />
                 { this.getView() }
             </div>
         )
