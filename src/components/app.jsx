@@ -23,7 +23,7 @@ class App extends React.Component {
     cards = JSON.parse(cards);
     if(cards !== null){
         this.setState({
-            cards: [cards]
+            cards: cards
         });
     }
   }
@@ -51,16 +51,17 @@ class App extends React.Component {
   saveCards() {
     let cards = this.state.cards;
     cards = JSON.stringify(cards);
-    localStorage.setItem(['flash-cards', cards]);
+    localStorage.setItem('flash-cards', cards);
   }
 
   addCards(card) {
-    this.setState(prevState => ({
-        cards: [...prevState.cards, card]
-    }));
+    this.setState({
+        cards: [...this.state.cards, card]
+    }, () => {this.saveCards()});
   }
 
   render() {
+    console.log("Cards From App", this.state.cards)
     return (
             <div>
                 <Nav setView={this.setView} view={this.state.view} />
