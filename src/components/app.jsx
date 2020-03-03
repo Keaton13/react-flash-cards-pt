@@ -21,7 +21,6 @@ class App extends React.Component {
   componentDidMount(){
     let cards = localStorage.getItem('flash-cards');
     cards = JSON.parse(cards);
-    console.log('ComponentDidMount ', cards);
     if(cards !== null){
         this.setState({
             cards: [cards]
@@ -62,7 +61,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("Cards From App ", this.state.cards)
     return (
             <div>
                 <Nav setView={this.setView} view={this.state.view} />
