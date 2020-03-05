@@ -31,7 +31,6 @@ class ReviewCards extends React.Component {
     }
 
     flipCard(){
-        console.log('flip card being called')
         if(this.state.cardDisplay == 'Front'){
             this.setState({
                 cardDisplay: "Back"
