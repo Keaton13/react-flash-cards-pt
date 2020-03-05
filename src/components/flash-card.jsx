@@ -4,7 +4,7 @@ function flashCard(props) {
         let question = props.value.question
         let answer = props.value.answer
     return (
-      <div className='col md-4'>
+      <div className='col md-4 mt-4'>
         <div className='card'>
           <div className='card-body bg-dark'>
           <h3 className='card-title text-secondary'>Question</h3>
