@@ -10,7 +10,6 @@ class ReviewCards extends React.Component {
         }
         this.nextCard = this.nextCard.bind(this)
         this.previousCard = this.previousCard.bind(this)
-        this.componentDidMount = this.componentDidMount.bind(this)
         this.flipCard = this.flipCard.bind(this);
         this.changeBackground = this.changeBackground.bind(this);
     }
