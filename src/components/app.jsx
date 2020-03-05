@@ -18,6 +18,16 @@ class App extends React.Component {
     this.addCards = this.addCards.bind(this);
   }
 
+  componentDidMount(){
+    let cards = localStorage.getItem('flash-cards');
+    cards = JSON.parse(cards);
+    if(cards !== null){
+        this.setState({
+            cards: cards
+        });
+    }
+  }
+
   setView(newView) {
     this.setState({
       view: newView,
@@ -32,7 +42,7 @@ class App extends React.Component {
       case 'review-cards':
         return <ReviewCards />;
       case 'view-cards':
-        return <ViewCards />;
+        return <ViewCards cards={this.state.cards}/>;
       default:
         return null;
     }
@@ -51,7 +61,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("Cards From App ", this.state.cards)
+    console.log("Cards From App", this.state.cards)
     return (
             <div>
                 <Nav setView={this.setView} view={this.state.view} />

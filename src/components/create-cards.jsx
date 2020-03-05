@@ -37,9 +37,8 @@ class CreateCards extends React.Component {
                 onChange={this.handleChange}
                 value={this.state.question}
                 className='form-control'
-                id='exampleInputEmail1'
                 name='question'
-                placeholder='Enter email'
+                placeholder='Enter Question'
               ></input>
             </div>
             <div className='form-group'>
@@ -51,7 +50,7 @@ class CreateCards extends React.Component {
                 className='form-control'
                 id='inputlg'
                 name='answer'
-                placeholder='Password'
+                placeholder='Answer'
               ></input>
             </div>
             <div className='clearfix'>
