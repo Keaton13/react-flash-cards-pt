@@ -4,3 +4,40 @@
 .textColorWhite {
     color: white;
 }
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+.zIndex1{
+    z-index: 1;
+}
+.modal-container {
+    display: flex;
+    background-color: rgba(0,0,0,.65);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    margin: auto;
+    width: 50%;
+    padding: 2rem;
+
+}
+
+.modal-content .title {
+    margin-top: 0;
+}

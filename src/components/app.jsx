@@ -20,6 +20,7 @@ class App extends React.Component {
     this.saveCards = this.saveCards.bind(this);
     this.addCards = this.addCards.bind(this);
     this.setActiveCard = this.setActiveCard.bind(this);
+    this.onConfirm = this.onConfirm.bind(this)
   }
 
   componentDidMount(){
@@ -54,7 +55,7 @@ class App extends React.Component {
             />;
       case 'view-cards':
         return <ViewCards 
-          cards={this.state.cards}/>;
+          cards={this.state.cards} onConfirm={this.onConfirm}/>;
       default:
         return null;
     }
@@ -88,6 +89,18 @@ class App extends React.Component {
       arrayIndex: index
     })
   }
+
+  onConfirm(currentCard){
+    let cards = this.state.cards;
+    for(let i = 0; i < cards.length; i++){
+      if(cards[i].question === currentCard.question && cards[i].answer === currentCard.answer){
+        let index = i
+        this.setState({
+          cards: this.state.cards.filter((_, i) => i != index)
+        }, () => {this.saveCards()})
+      }
+    }
+  } 
 
   render() {
     console.log("Cards From App", this.state.cards)
